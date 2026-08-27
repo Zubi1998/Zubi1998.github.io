@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Einsatzplan 100 Jahre Zurbuchen – Jubiläum 9. bis 13. September 2026">
+<title>Einsatzplan 100 Jahre Zurbuchen</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+
+<style>
+:root {
+  --ground:      #F2F1EC;
+  --surface:     #FFFFFF;
+  --surface-alt: #FAF9F5;
+  --ink:         #22272A;
+  --ink-soft:    #4A5155;
+  --muted:       #63696D;
+  --line:        #DEDCD5;
+  --line-soft:   #E9E7E1;
+  --slate:       #2E3438;
+  --on-slate:    #F2F1EC;
+  --on-day:      #FFFFFF;
+  --brass:       #D6A63A;
+
+  --tag-mittwoch:   #8A6612;
+  --tag-donnerstag: #A8478A;
+  --tag-freitag:    #C0140F;
+  --tag-samstag:    #0F7D5E;
+  --tag-sonntag:    #2F6FC0;
+
+  --warn:      #B3320F;
+  --warn-bg:   #F9E7E1;
+  --ok:        #0C6B50;
+  --ok-bg:     #E4F1EB;
+  --info:      #2560A8;
+  --info-bg:   #E6EEF9;
+
+  --focus: #2F6FC0;
+
+  --f-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --f-body:    "Barlow", "Helvetica Neue", Arial, sans-serif;
+  --f-mono:    "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --shadow: 0 1px 2px rgba(34, 39, 42, .06), 0 6px 18px -10px rgba(34, 39, 42, .18);
+  --radius: 4px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground:      #15181A;
+    --surface:     #1D2124;
+    --surface-alt: #22272A;
+    --ink:         #E9E8E3;
+    --ink-soft:    #C2C5C6;
+    --muted:       #949A9E;
+    --line:        #313739;
+    --line-soft:   #292F31;
+    --slate:       #0F1214;
+    --on-slate:    #E9E8E3;
+    --on-day:      #15181A;
+    --brass:       #D6A63A;
+
+    --tag-mittwoch:   #D6A63A;
+    --tag-donnerstag: #D97CBC;
+    --tag-freitag:    #F0685F;
+    --tag-samstag:    #3FB68E;
+    --tag-sonntag:    #6FA6E8;
+
+    --warn:    #F0857A;
+    --warn-bg: #3A2320;
+    --ok:      #3FB68E;
+    --ok-bg:   #16302A;
+    --info:    #6FA6E8;
+    --info-bg: #1A2735;
+
+    --focus: #6FA6E8;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 6px 18px -10px rgba(0, 0, 0, .7);
+  }
+}
+
+:root[data-theme="dark"] {
+  --ground:      #15181A;
+  --surface:     #1D2124;
+  --surface-alt: #22272A;
+  --ink:         #E9E8E3;
+  --ink-soft:    #C2C5C6;
+  --muted:       #949A9E;
+  --line:        #313739;
+  --line-soft:   #292F31;
+  --slate:       #0F1214;
+  --on-slate:    #E9E8E3;
+  --on-day:      #15181A;
+  --brass:       #D6A63A;
+
+  --tag-mittwoch:   #D6A63A;
+  --tag-donnerstag: #D97CBC;
+  --tag-freitag:    #F0685F;
+  --tag-samstag:    #3FB68E;
+  --tag-sonntag:    #6FA6E8;
+
+  --warn:    #F0857A;
+  --warn-bg: #3A2320;
+  --ok:      #3FB68E;
+  --ok-bg:   #16302A;
+  --info:    #6FA6E8;
+  --info-bg: #1A2735;
+
+  --focus: #6FA6E8;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 6px 18px -10px rgba(0, 0, 0, .7);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.wrap {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 16px 72px;
+}
+
+/* ---------- Kopf ---------- */
+.masthead {
+  background: var(--slate);
+  color: var(--on-slate);
+  padding: 22px 0 20px;
+}
+.masthead .wrap { padding-bottom: 0; }
+.brand {
+  font-family: var(--f-display);
+  font-weight: 700;
+  font-size: clamp(1.35rem, 4.5vw, 1.9rem);
+  letter-spacing: -.015em;
+  margin: 0;
+  text-wrap: balance;
+}
+.brand .years { color: var(--brass); }
+.standfirst {
+  margin: 6px 0 0;
+  font-size: .95rem;
+  color: var(--on-slate);
+  opacity: .72;
+}
+.standfirst .sep { opacity: .5; padding: 0 .4em; }
+
+/* ---------- Ansichtswechsel ---------- */
+.viewbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--ground);
+  border-bottom: 1px solid var(--line);
+}
+.viewbar-inner {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 10px 16px;
+  display: flex;
+  gap: 8px;
+}
+.viewbtn {
+  flex: 1;
+  appearance: none;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink-soft);
+  font-family: var(--f-body);
+  font-size: .95rem;
+  font-weight: 600;
+  padding: 11px 12px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background .15s, color .15s, border-color .15s;
+}
+.viewbtn:hover { border-color: var(--muted); }
+.viewbtn[aria-selected="true"] {
+  background: var(--slate);
+  border-color: var(--slate);
+  color: var(--on-slate);
+}
+
+/* ---------- Personenwahl ---------- */
+.picker {
+  margin: 22px 0 0;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+.picker label {
+  display: block;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+.picker select {
+  width: 100%;
+  font-family: var(--f-body);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--ink);
+  background: var(--surface-alt);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  cursor: pointer;
+}
+
+.tally {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 26px;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line-soft);
+}
+.tally div { display: flex; flex-direction: column; gap: 1px; }
+.tally .n {
+  font-family: var(--f-mono);
+  font-size: 1.5rem;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+  color: var(--ink);
+}
+.tally .k {
+  font-size: .72rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ---------- Filter ---------- */
+.filters { margin: 22px 0 0; display: flex; flex-direction: column; gap: 12px; }
+.chips { display: flex; flex-wrap: wrap; gap: 7px; }
+.chip {
+  appearance: none;
+  font-family: var(--f-body);
+  font-size: .88rem;
+  font-weight: 600;
+  padding: 7px 13px;
+  border-radius: 100px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: background .15s, color .15s, border-color .15s;
+}
+.chip:hover { border-color: var(--muted); }
+.chip[aria-pressed="true"] {
+  background: var(--slate);
+  border-color: var(--slate);
+  color: var(--on-slate);
+}
+.chip[aria-pressed="true"][data-tag="Mittwoch"]   { background: var(--tag-mittwoch);   border-color: var(--tag-mittwoch);   color: var(--on-day); }
+.chip[aria-pressed="true"][data-tag="Donnerstag"] { background: var(--tag-donnerstag); border-color: var(--tag-donnerstag); color: var(--on-day); }
+.chip[aria-pressed="true"][data-tag="Freitag"]    { background: var(--tag-freitag);    border-color: var(--tag-freitag);    color: var(--on-day); }
+.chip[aria-pressed="true"][data-tag="Samstag"]    { background: var(--tag-samstag);    border-color: var(--tag-samstag);    color: var(--on-day); }
+.chip[aria-pressed="true"][data-tag="Sonntag"]    { background: var(--tag-sonntag);    border-color: var(--tag-sonntag);    color: var(--on-day); }
+
+.searchrow { display: flex; gap: 8px; flex-wrap: wrap; }
+.searchrow input, .searchrow select {
+  flex: 1 1 200px;
+  min-width: 0;
+  font-family: var(--f-body);
+  font-size: .95rem;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+}
+.searchrow input::placeholder { color: var(--muted); }
+
+.resultline {
+  font-size: .85rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Tagesband ---------- */
+.day { margin-top: 26px; }
+.dayband {
+  display: flex;
+  align-items: baseline;
+  gap: 10px 14px;
+  flex-wrap: wrap;
+  padding: 9px 14px;
+  border-radius: var(--radius);
+  color: var(--on-slate);
+  background: var(--slate);
+}
+.day[data-tag="Mittwoch"]   .dayband { background: var(--tag-mittwoch);   color: var(--on-day); }
+.day[data-tag="Donnerstag"] .dayband { background: var(--tag-donnerstag); color: var(--on-day); }
+.day[data-tag="Freitag"]    .dayband { background: var(--tag-freitag);    color: var(--on-day); }
+.day[data-tag="Samstag"]    .dayband { background: var(--tag-samstag);    color: var(--on-day); }
+.day[data-tag="Sonntag"]    .dayband { background: var(--tag-sonntag);    color: var(--on-day); }
+.dayband h2 {
+  font-family: var(--f-display);
+  font-weight: 700;
+  font-size: 1.02rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  margin: 0;
+}
+.dayband .date {
+  font-family: var(--f-mono);
+  font-size: .85rem;
+  font-variant-numeric: tabular-nums;
+  opacity: .9;
+}
+.dayband .role { font-size: .85rem; opacity: .85; margin-left: auto; }
+
+/* ---------- Zeitschiene ---------- */
+.tasks { padding: 4px 0 0; }
+.task {
+  display: grid;
+  grid-template-columns: 4.4rem 1fr;
+  gap: 0 14px;
+  align-items: start;
+}
+.task-time {
+  font-family: var(--f-mono);
+  font-size: .82rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-soft);
+  padding-top: 15px;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.35;
+}
+.task-time .to { color: var(--muted); font-size: .76rem; }
+.task-time .open { color: var(--muted); font-style: italic; font-size: .72rem; }
+
+.task-body {
+  position: relative;
+  border-left: 1px solid var(--line);
+  padding: 14px 0 14px 18px;
+  min-width: 0;
+}
+.task:last-child .task-body { border-left-color: transparent; }
+.task:last-child .task-body::after {
+  content: "";
+  position: absolute;
+  left: -1px; top: 0; height: 21px;
+  border-left: 1px solid var(--line);
+}
+.task-body::before {
+  content: "";
+  position: absolute;
+  left: -4.5px;
+  top: 20px;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--slate);
+  outline: 3px solid var(--ground);
+}
+.day[data-tag="Mittwoch"]   .task-body::before { background: var(--tag-mittwoch); }
+.day[data-tag="Donnerstag"] .task-body::before { background: var(--tag-donnerstag); }
+.day[data-tag="Freitag"]    .task-body::before { background: var(--tag-freitag); }
+.day[data-tag="Samstag"]    .task-body::before { background: var(--tag-samstag); }
+.day[data-tag="Sonntag"]    .task-body::before { background: var(--tag-sonntag); }
+
+.task h3 {
+  font-family: var(--f-body);
+  font-size: 1.02rem;
+  font-weight: 600;
+  line-height: 1.32;
+  margin: 0;
+  text-wrap: balance;
+}
+.task .area {
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 3px;
+}
+.rowmeta { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.people { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.who {
+  font-size: .82rem;
+  padding: 3px 9px;
+  border-radius: 100px;
+  background: var(--surface-alt);
+  border: 1px solid var(--line-soft);
+  color: var(--ink-soft);
+}
+.who.self {
+  background: var(--slate);
+  border-color: var(--slate);
+  color: var(--on-slate);
+  font-weight: 600;
+}
+.who.none { font-style: italic; color: var(--muted); background: transparent; border-style: dashed; }
+.pill {
+  font-size: .76rem;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 100px;
+  letter-spacing: .01em;
+}
+.pill.lead { background: var(--info-bg); color: var(--info); }
+.pill.warn { background: var(--warn-bg); color: var(--warn); }
+.pill.done { background: var(--ok-bg); color: var(--ok); }
+.note {
+  margin: 9px 0 0;
+  font-size: .9rem;
+  color: var(--ink-soft);
+  padding-left: 11px;
+  border-left: 2px solid var(--line);
+  max-width: 62ch;
+}
+
+/* ---------- Leerzustand / Fuss ---------- */
+.empty {
+  margin-top: 26px;
+  padding: 30px 20px;
+  text-align: center;
+  background: var(--surface);
+  border: 1px dashed var(--line);
+  border-radius: var(--radius);
+  color: var(--muted);
+}
+.empty strong { display: block; color: var(--ink); font-size: 1.05rem; margin-bottom: 6px; }
+
+.colophon {
+  margin-top: 44px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  font-size: .8rem;
+  color: var(--muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+}
+
+.hide { display: none !important; }
+
+/* ---------- Breiter Bildschirm ---------- */
+@media (min-width: 720px) {
+  .task { grid-template-columns: 5.6rem 1fr; }
+  .task-time { font-size: .9rem; }
+  .task h3 { font-size: 1.08rem; }
+  .tally { gap: 10px 40px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
+
+/* ---------- Druck ---------- */
+@media print {
+  .viewbar, .filters, .picker label, .picker select, .colophon { display: none !important; }
+  body { background: #fff; color: #000; font-size: 11pt; }
+  .masthead { background: #fff; color: #000; padding: 0 0 8pt; border-bottom: 1pt solid #000; }
+  .brand .years { color: #000; }
+  .standfirst { opacity: 1; color: #333; }
+  .picker { border: 0; box-shadow: none; padding: 0; margin-top: 10pt; }
+  .dayband { background: #eee !important; color: #000 !important; border: 1pt solid #999; }
+  .day { break-inside: avoid; }
+  .task { break-inside: avoid; }
+  .wrap { padding: 0; max-width: none; }
+}
+</style>
+
+</head>
+<body>
+<header class="masthead">
+  <div class="wrap">
+    <h1 class="brand"><span class="years">100 Jahre</span> Zurbuchen &middot; Einsatzplan</h1>
+    <p class="standfirst">
+      <span id="eventspan">9.&ndash;13. September 2026</span>
+      <span class="sep">&middot;</span>Zurbuchen AG Amlikon
+    </p>
+  </div>
+</header>
+
+<nav class="viewbar" aria-label="Ansicht">
+  <div class="viewbar-inner" role="tablist">
+    <button class="viewbtn" id="tab-mine" role="tab" aria-selected="true" aria-controls="view-mine">Mein Einsatz</button>
+    <button class="viewbtn" id="tab-all" role="tab" aria-selected="false" aria-controls="view-all">Gesamtplan</button>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <section id="view-mine" role="tabpanel" aria-labelledby="tab-mine">
+    <div class="picker">
+      <label for="person">Wer bist du?</label>
+      <select id="person"></select>
+      <div class="tally" id="tally"></div>
+    </div>
+    <div id="mine-out"></div>
+  </section>
+
+  <section id="view-all" role="tabpanel" aria-labelledby="tab-all" class="hide">
+    <div class="filters">
+      <div class="chips" id="daychips"></div>
+      <div class="searchrow">
+        <input type="search" id="q" placeholder="Aufgabe, Person oder Bemerkung suchen" aria-label="Suchen">
+        <select id="areasel" aria-label="Bereich"></select>
+      </div>
+      <p class="resultline" id="resultline"></p>
+    </div>
+    <div id="all-out"></div>
+  </section>
+
+  <p class="colophon">
+    <span>Stand <span id="stand"></span></span>
+    <span>Quelle: <span id="quelle"></span></span>
+    <span>Fragen zur Einteilung: Thomas oder Jerome</span>
+  </p>
+</main>
+
+<script>
+const DATA = {"aufgaben":[{"tag":"Mittwoch","datum":"2026-09-09","von":"06:45","bis":"10:00","bereich":"Aufbau allgemein","aufgabe":"Endmontage ausräumen und saugen","personen":["Armin.Z","Dzevdet.I","Daniela.K"],"verantwortlich":"Armin","status":"Offen","konflikt":false,"bemerkung":"Armin koordiniert das."},{"tag":"Mittwoch","datum":"2026-09-09","von":"06:45","bis":"09:00","bereich":"Kinder / Lehrlinge","aufgabe":"Schopf ausräumen für Hüpfburg","personen":["Ivo.B"],"verantwortlich":"Armin","status":"Offen","konflikt":false,"bemerkung":"Mit einer Aufsichtsperson während Event"},{"tag":"Mittwoch","datum":"2026-09-09","von":"06:45","bis":"12:00","bereich":"Kinder / Lehrlinge","aufgabe":"Lehrlingsmaterial von VSSM holen","personen":["Arben.A"],"verantwortlich":"Hansruedi","status":"Offen","konflikt":false,"bemerkung":"Muss in Zürich abgeholt werden."},{"tag":"Mittwoch","datum":"2026-09-09","von":"06:45","bis":"12:00","bereich":"Lounge","aufgabe":"Mobiliar für Chill-Lounge holen","personen":["Jerome.Z","Tobias.S"],"verantwortlich":"Jerome","status":"Offen","konflikt":false,"bemerkung":"Kann im Kehlhof im Mainstation Raum geholt werden"},{"tag":"Mittwoch","datum":"2026-09-09","von":"06:45","bis":"12:00","bereich":"Reinigung / Entsorgung","aufgabe":"Ausstellung Fenster reinigen und alles abstauben","personen":["Kaschka"],"verantwortlich":"Christoph","status":"Offen","konflikt":false,"bemerkung":null},{"tag":"Mittwoch","datum":"2026-09-09","von":"06:45","bis":"12:00","bereich":"Reinigung / Entsorgung","aufgabe":"Gebäudefassade putzen","personen":["Manuel.M"],"verantwortlich":"Christoph","status":"Offen","konflikt":false,"bemerkung":null},{"tag":"Mittwoch","datum":"2026-09-09","von":"06:45","bis":"17:15","bereich":"Ausstellung","aufgabe":"Ausstellung einrichten","personen":["Michi.H","Urs.Z","Stefan.E"],"verantwortlich":"Urs","status":"Offen","konflikt":false,"bemerkung":null},{"tag":"Mittwoch","datum":"2026-09-09","von":"06:45","bis":"12:00","bereich":"Gastronomie","aufgabe":"Magenbrot bei Martin abholen","personen":[],"verantwortlich":"Armin","status":"Offen","konflikt":false,"bemerkung":null},{"tag":"Mittwoch","datum":"2026-09-09","von":"06:45","bis":"12:00","bereich":"Aufbau allgemein","aufgabe":"Beamer aufhängen und testen mit Powerpoint","personen":["Oliver Roost"],"verantwortlich":"Jerome","status":"Offen","konflikt":false,"bemerkung":null},{"tag":"Mittwoch","datum":"2026-09-09","von":"08:00","bis":"17:15","bereich":"Deko","aufgabe":"Zeitstrahl aufbauen","personen":["Magi.Z","Corinne.Z","Gabi.Z"],"verantwortlich":"Thomas","status":"Offen","konflikt":false,"bemerkung":"Schwarze Platten werden am Dienstag montiert!"},{"tag":"Mittwoch","datum":"2026-09-09","von":"13:00","bis":"17:15","bereich":"Aufbau allgemein","aufgabe":"Eingangstreppe aufbauen","personen":["Hansruedi.S","Tobias.S"],"verantwortlich":"Jerome","status":"Offen","konflikt":false,"bemerkung":"Logo muss seitlich aufgeklebt werden."},{"tag":"Mittwoch","datum":"2026-09-09","von":"13:00","bis":"17:15","bereich":"Aufbau allgemein","aufgabe":"Regale einkleiden in Endmontage inkl. Abstellzone","personen":["Dan.L","Christian.S"],"verantwortlich":"Thomas","status":"Offen","konflikt":false,"bemerkung":"Mit Molton einkleiden."},{"tag":"Mittwoch","datum":"2026-09-09","von":"13:00","bis":"17:15","bereich":"Bühne","aufgabe":"Bühne aufbauen und mit Teppich belegen","personen":["Armin.Z","Mirco.M","Dzevdet.I"],"verantwortlich":"Jerome","status":"Offen","konflikt":false,"bemerkung":"Flächen werden mit Teppich belegt (mit Armin besprechen)"},{"tag":"Mittwoch","datum":"2026-09-09","von":"13:00","bis":"17:15","bereich":"Bühne","aufgabe":"Bühne mit Mobiliar einrichten und dekorieren","personen":["Fabienne.Z","Gzregorz.L"],"verantwortlich":"Armin","status":"Offen","konflikt":false,"bemerkung":"Stühle von Büro Gabi, Tisch von Jerome, Rednerpult von Ausstellung."},{"tag":"Mittwoch","datum":"2026-09-09","von":"13:00","bis":"17:15","bereich":"Reinigung / Entsorgung","aufgabe":"Boden reinigen","personen":["Daniela.K"],"verantwortlich":"Armin","status":"Offen","konflikt":false,"bemerkung":null},{"tag":"Mittwoch","datum":"2026-09-09","von":"13:00","bis":"14:00","bereich":"Lounge","aufgabe":"Teppich legen (beige)","personen":["Dariush.S","Michael.N"],"verantwortlich":"Armin","status":"Offen","konflikt":false,"bemerkung":null},{"tag":"Mittwoch","datum":"2026-09-09","von":"13:00","bis":"17:15","bereich":"Aufbau allgemein","aufgabe":"Stühle von FestX in Mettendorf holen","personen":["Arben.A"],"verantwortlich":"Thomas","status":"Offen","konflikt":false,"bemerkung":null},{"tag":"Mittwoch","datum":"2026-09-09","von":"14:00","bis":"17:15","bereich":"Lounge","aufgabe":"Lounge mit Mobiliar einrichten","personen":["Dariush.S","Michael.N"],"verantwortlich":"Armin / Fabienne","status":"Offen","konflikt":false,"bemerkung":null},{"tag":"Donnerstag","datum":"2026-09-10","von":"06:45","bis":"12:00","bereich":"Kinder / Lehrlinge","aufgabe":"Hüpfburg abholen und aufbauen","personen":["Arben.A"],"verantwortlich":"Armin","status":"Offen","konflikt":false,"bemerkung":"Kann auch früher abgeholt werden in Niederhasli. Armin organisiert das."},{"tag":"Donnerstag","datum":"2026-09-10","von":"06:45","bis":"12:00","bereich":"Kinder / Lehrlinge","aufgabe":"Lehrlingsecken einrichten für Murmelspiel","personen":["Hansruedi.S","Tobias.S"],"verantwortlich":"Hansruedi / Thomas","status":"Offen","konflikt":false,"bemerkung":"Rote Farbe mit Spritze nicht vergessen!"},{"tag":"Donnerstag","datum":"2026-09-10","von":"06:45","bis":"12:00","bereich":"Kinder / Lehrlinge","aufgabe":"3D-Drucker Showzweck einrichten","personen":["Jerome.Z"],"verantwortlich":"Jerome","status":"Offen","konflikt":false,"bemerkung":"Hansruedi oder Tobias einführen für 3D-Drucker bedienung."},{"tag":"Donnerstag","datum":"2026-09-10","von":"06:45","bis":"12:00","bereich":"Technik Licht/Ton","aufgabe":"Lichttechnik einrichten (Lampen aufhängen + Scheinwerfer)","personen":["Oliver Roost","Sven.T"],"verantwortlich":"Jerome","status":"Offen","konflikt":false,"bemerkung":"Jerome wird am Schluss von Oliver eingeführt bezüglich Bedienung."},{"tag":"Donnerstag","datum":"2026-09-10","von":"06:45","bis":"11:00","bereich":"Getränke","aufgabe":"Anlieferung Aerni Getränke mit Kühlwagen","personen":["Armin.Z"],"verantwortlich":"Armin","status":"Offen","konflikt":false,"bemerkung":null},{"tag":"Donnerstag","datum":"2026-09-10","von":"13:00","bis":"17:15","bereich":"Technik Licht/Ton","aufgabe":"Tontechnik einrichten","personen":["Peter Zurbuchen"],"verantwortlich":"Thomas","status":"Offen","konflikt":false,"bemerkung":"Mausi kommt am 11:00"},{"tag":"Donnerstag","datum":"2026-09-10","von":"13:00","bis":"14:30","bereich":"Festwirtschaft","aufgabe":"Tische + Stühle aufstellen","personen":["Dzevdet.I","Daniela.K"],"verantwortlich":"Armin","status":"Offen","konflikt":false,"bemerkung":"Material alles vorhanden?"},{"tag":"Donnerstag","datum":"2026-09-10","von":"13:00","bis":"17:15","bereich":"Gastronomie","aufgabe":"Kaffee-Erlebnis einrichten","personen":["Lukas Zurbuchen"],"verantwortlich":"Jerome","status":"Offen","konflikt":false,"bemerkung":null},{"tag":"Donnerstag","datum":"2026-09-10","von":"13:00","bis":"17:15","bereich":"Gastronomie","aufgabe":"Tomela Glacestand einrichten","personen":["Gzregorz.L"],"verantwortlich":"Armin / Fabienne","status":"Offen","konflikt":false,"bemerkung":null},{"tag":"Donnerstag","datum":"2026-09-10","von":"13:00","bis":"15:00","bereich":"Parkplatz / Verkehr","aufgabe":"Parkplätze einrichten","personen":["Arben.A","Christoph.Z"],"verantwortlich":"Thomas","status":"Offen","konflikt":false,"bemerkung":"Mit Absperrband"},{"tag":"Donnerstag","datum":"2026-09-10","von":"13:00","bis":"15:00","bereich":"Deko","aufgabe":"Tische einkleiden und dekorieren","personen":["Corinne.Z","Magi.Z"],"verantwortlich":"Fabienne","status":"Offen","konflikt":false,"bemerkung":null},{"tag":"Donnerstag","datum":"2026-09-10","von":"13:30","bis":"15:00","bereich":"Festwirtschaft","aufgabe":"Anlieferung Hanselmann","personen":[],"verantwortlich":"Thomas","status":"Offen","konflikt":false,"bemerkung":"Würste, Bier und Grill für Freitag"},{"tag":"Donnerstag","datum":"2026-09-10","von":"13:30","bis":"15:00","bereich":"Aufbau allgemein","aufgabe":"Anlieferung Geschenk von politischer Gemeinde","personen":[],"verantwortlich":"Thomas","status":"Offen","konflikt":false,"bemerkung":"Geschenk wird auf Bühne gestellt."},{"tag":"Donnerstag","datum":"2026-09-10","von":"14:30","bis":"15:00","bereich":"Festwirtschaft","aufgabe":"Stände aufstellen (Bärenmost, Kasse, Catering)","personen":["Dzevdet.I","Daniela.K"],"verantwortlich":"Armin / Fabienne","status":"Offen","konflikt":false,"bemerkung":"Bärenmost benötigt nur einen Tisch"},{"tag":"Donnerstag","datum":"2026-09-10","von":"15:00","bis":"16:00","bereich":"Rundgang","aufgabe":"Betrieb für Rundgang einrichten","personen":["Mirco.M","Christoph.Z"],"verantwortlich":"Christoph","status":"Offen","konflikt":false,"bemerkung":"Wegweiser aufstellen, WC-Beschriftung, Schild Kasse, Dressierband"},{"tag":"Donnerstag","datum":"2026-09-10","von":"15:00","bis":"17:15","bereich":"Deko","aufgabe":"Dekorieren (Ausstellung + Endmontage)","personen":["Gabi.Z","Magi.Z","Corinne.Z","Daniela.K"],"verantwortlich":"Fabienne","status":"Offen","konflikt":false,"bemerkung":"Bühne / Eingangstreppe / Tische und Ausstellung"},{"tag":"Donnerstag","datum":"2026-09-10","von":"16:00","bis":"17:15","bereich":"Reinigung / Entsorgung","aufgabe":"Mulde leeren","personen":["Christoph.Z"],"verantwortlich":"Christoph","status":"Offen","konflikt":false,"bemerkung":null},{"tag":"Donnerstag","datum":"2026-09-10","von":"16:00","bis":"16:30","bereich":"Festwirtschaft","aufgabe":"Festbänke und Grill bereitstellen","personen":["Ivo.B"],"verantwortlich":"Armin","status":"Offen","konflikt":false,"bemerkung":null},{"tag":"Donnerstag","datum":"2026-09-10","von":"17:15","bis":null,"bereich":"Reinigung / Entsorgung","aufgabe":"Schlussreinigung (WC, Ausstellung, Fenster)","personen":["Kaschka"],"verantwortlich":"Thomas","status":"Offen","konflikt":false,"bemerkung":"Ganz am Schluss nochmals reinigen"},{"tag":"Freitag","datum":"2026-09-11","von":"06:30","bis":"09:15","bereich":"Parkplatz / Verkehr","aufgabe":"Parkplätze einweisen","personen":["Arben.A","Dzevdet.I"],"verantwortlich":"Dzevdet","status":"Offen","konflikt":false,"bemerkung":"Arben steht permanent draussen."},{"tag":"Freitag","datum":"2026-09-11","von":"06:30","bis":"07:15","bereich":"Gastronomie","aufgabe":"Bäckerei Mohn helfen aufbauen","personen":["Kurt.W"],"verantwortlich":"Thomas","status":"Offen","konflikt":false,"bemerkung":null},{"tag":"Freitag","datum":"2026-09-11","von":"06:30","bis":"07:00","bereich":"Empfang / Gäste","aufgabe":"Referenten, Lieferanten und Musiker empfangen","personen":["Fabienne.Z"],"verantwortlich":"Fabienne","status":"Offen","konflikt":false,"bemerkung":null},{"tag":"Freitag","datum":"2026-09-11","von":"06:45","bis":"12:30","bereich":"Produktion / Betrieb","aufgabe":"Zuschnitt","personen":["Ivo.B"],"verantwortlich":"Christoph","status":"Offen","konflikt":false,"bemerkung":null},{"tag":"Freitag","datum":"2026-09-11","von":"06:45","bis":"12:30","bereich":"Produktion / Betrieb","aufgabe":"Kantenleimer","personen":["Dan.L"],"verantwortlich":"Christoph","status":"Offen","konflikt":false,"bemerkung":null},{"tag":"Freitag","datum":"2026-09-11","von":"06:45","bis":"12:30","bereich":"Produktion / Betrieb","aufgabe":"Presse","personen":["Dariush.S","Mirco.M"],"verantwortlich":"Christoph","status":"Offen","konflikt":false,"bemerkung":null},{"tag":"Freitag","datum":"2026-09-11","von":"06:45","bis":"12:30","bereich":"Produktion / Betrieb","aufgabe":"Oberflächenbehandlung","personen":["Francesco.M","Manuel.M","Michelle.B"],"verantwortlich":"Christoph","status":"Offen","konflikt":false,"bemerkung":null},{"tag":"Freitag","datum":"2026-09-11","von":"06:45","bis":"12:30","bereich":"Produktion / Betrieb","aufgabe":"Furnier Zuschnitt","personen":["Gzregorz.L"],"verantwortlich":"Christoph","status":"Offen","konflikt":false,"bemerkung":null},{"tag":"Freitag","datum":"2026-09-11","von":"06:45","bis":"12:30","bereich":"Produktion / Betrieb","aufgabe":"BREMA-CNC","personen":["Sven.T"],"verantwortlich":"Christoph","status":"Offen","konflikt":false,"bemerkung":null},{"tag":"Freitag","datum":"2026-09-11","von":"06:45","bis":"12:30","bereich":"Produktion / Betrieb","aufgabe":"IMA-CNC","personen":["Christian.S"],"verantwortlich":"Christoph","status":"Offen","konflikt":false,"bemerkung":null},{"tag":"Freitag","datum":"2026-09-11","von":"06:45","bis":"12:00","bereich":"Produktion / Betrieb","aufgabe":"Lehrlingsstand","personen":["Hansruedi.S","Tobias.S","Antony.K"],"verantwortlich":"Thomas","status":"Offen","konflikt":false,"bemerkung":null},{"tag":"Freitag","datum":"2026-09-11","von":"07:00","bis":"08:30","bereich":"Empfang / Gäste","aufgabe":"Begrüssungsteam","personen":["Stefan.E","Gabi.N","Michi.H","Corinne.Z","Magi.Z","Gabi.Z"],"verantwortlich":"Gabi","status":"Offen","konflikt":false,"bemerkung":null},{"tag":"Freitag","datum":"2026-09-11","von":"07:00","bis":"08:00","bereich":"Rundgang","aufgabe":"Rundgänge (1)","personen":["Armin.Z","Noel.Z","Thomas.Z","Simon.Z","Jerome.Z","Christoph.Z"],"verantwortlich":"Christoph","status":"Offen","konflikt":false,"bemerkung":null},{"tag":"Freitag","datum":"2026-09-11","von":"07:45","bis":"11:00","bereich":"Gastronomie","aufgabe":"Bäckerei Mohn helfen","personen":["Geraldine.Z","Michelle.Z","Daniela.K"],"verantwortlich":"Magi","status":"Offen","konflikt":false,"bemerkung":null},{"tag":"Freitag","datum":"2026-09-11","von":"08:15","bis":"09:15","bereich":"Technik Licht/Ton","aufgabe":"Klavier Background-Musik","personen":["Jürg Brennwalder"],"verantwortlich":"Armin","status":"Offen","konflikt":false,"bemerkung":"Jürg bringt sein Klavier. Kann beginnen zu spielen, sobald die erten Gäste eintreffen vom Rundgang."},{"tag":"Freitag","datum":"2026-09-11","von":"09:15","bis":"09:19","bereich":"Unterhaltung","aufgabe":"Begrüssung","personen":["Urs.Z"],"verantwortlich":null,"status":"Offen","konflikt":false,"bemerkung":null},{"tag":"Freitag","datum":"2026-09-11","von":"09:15","bis":"10:40","bereich":"Unterhaltung","aufgabe":"Gemäss Ablaufsplan Freitag","personen":[],"verantwortlich":"Thomas","status":"Offen","konflikt":false,"bemerkung":null},{"tag":"Freitag","datum":"2026-09-11","von":"09:19","bis":"09:25","bereich":"Unterhaltung","aufgabe":"Auftritt","personen":["Simon.C"],"verantwortlich":null,"status":"Offen","konflikt":false,"bemerkung":null},{"tag":"Freitag","datum":"2026-09-11","von":"09:28","bis":"09:36","bereich":"Unterhaltung","aufgabe":"Auftritt","personen":["Thomas.O"],"verantwortlich":null,"status":"Offen","konflikt":false,"bemerkung":null},{"tag":"Freitag","datum":"2026-09-11","von":"10:40","bis":"12:30","bereich":"Empfang / Gäste","aufgabe":"Besuchergeschenke überreichen","personen":["Corinne.Z","Magi.Z","Gabi.Z"],"verantwortlich":"Fabienne","status":"Offen","konflikt":false,"bemerkung":null},{"tag":"Freitag","datum":"2026-09-11","von":"11:00","bis":"12:30","bereich":"Rundgang","aufgabe":"Rundgänge (2)","personen":["Armin.Z","Noel.Z","Thomas.Z","Simon.Z","Jerome.Z","Christoph.Z"],"verantwortlich":"Christoph","status":"Offen","konflikt":false,"bemerkung":null},{"tag":"Freitag","datum":"2026-09-11","von":"11:15","bis":null,"bereich":"Abbau / Rückgabe","aufgabe":"Abbau Mohn helfen","personen":["Magi","Michelle","Daniela.K"],"verantwortlich":"Magi","status":"Offen","konflikt":true,"bemerkung":null},{"tag":"Freitag","datum":"2026-09-11","von":"11:15","bis":null,"bereich":"Abbau / Rückgabe","aufgabe":"Abbau Bärenmost-Stand","personen":["Magi","Michelle","Daniela.K"],"verantwortlich":"Armin","status":"Offen","konflikt":true,"bemerkung":null},{"tag":"Freitag","datum":"2026-09-11","von":"11:15","bis":null,"bereich":"Reinigung / Entsorgung","aufgabe":"Abfall leeren, Tische reinigen","personen":[],"verantwortlich":"Armin / Fabienne","status":"Offen","konflikt":false,"bemerkung":null},{"tag":"Freitag","datum":"2026-09-11","von":null,"bis":null,"bereich":"Aufbau allgemein","aufgabe":"Bereitstellung für Samstag","personen":[],"verantwortlich":"Thomas","status":"Offen","konflikt":false,"bemerkung":null},{"tag":"Freitag","datum":"2026-09-11","von":null,"bis":null,"bereich":"Gastronomie","aufgabe":"Tomela bringt Glacestand","personen":[],"verantwortlich":null,"status":"Offen","konflikt":false,"bemerkung":"Zeit: Nachmittag – genaue Zeit noch offen"},{"tag":"Samstag","datum":"2026-09-12","von":"08:45","bis":"09:00","bereich":"Empfang / Gäste","aufgabe":"Empfang der Mitarbeiter","personen":[],"verantwortlich":"Thomas","status":"Offen","konflikt":false,"bemerkung":null},{"tag":"Samstag","datum":"2026-09-12","von":"11:00","bis":"17:00","bereich":"Festwirtschaft","aufgabe":"Kasse bedienen","personen":[],"verantwortlich":null,"status":"Offen","konflikt":false,"bemerkung":null},{"tag":"Samstag","datum":"2026-09-12","von":"11:00","bis":"17:00","bereich":"Gastronomie","aufgabe":"Tomela Glacestand bedienen","personen":[],"verantwortlich":"Armin","status":"Offen","konflikt":false,"bemerkung":null},{"tag":"Samstag","datum":"2026-09-12","von":"11:00","bis":"17:00","bereich":"Getränke","aufgabe":"Getränke herausgeben","personen":[],"verantwortlich":null,"status":"Offen","konflikt":false,"bemerkung":null},{"tag":"Samstag","datum":"2026-09-12","von":"11:00","bis":"11:30","bereich":"Gastronomie","aufgabe":"Kuchen abholen bei Rosmarie","personen":["Fabienne.Z"],"verantwortlich":"Fabienne","status":"Offen","konflikt":false,"bemerkung":null},{"tag":"Sonntag","datum":"2026-09-13","von":null,"bis":null,"bereich":"Abbau / Rückgabe","aufgabe":"Programm Sonntag / Abbau – noch zu planen","personen":[],"verantwortlich":null,"status":"Offen","konflikt":false,"bemerkung":"Bitte ergänzen"}],"tage":[{"tag":"Mittwoch","datum":"2026-09-09"},{"tag":"Donnerstag","datum":"2026-09-10"},{"tag":"Freitag","datum":"2026-09-11"},{"tag":"Samstag","datum":"2026-09-12"},{"tag":"Sonntag","datum":"2026-09-13"}],"personen":["Antony.K","Arben.A","Armin.Z","Christian.S","Christoph.Z","Corinne.Z","Dan.L","Daniela.K","Dariush.S","Dzevdet.I","Fabienne.Sutter","Fabienne.Z","Francesco.M","Gabi.N","Gabi.Z","Geraldine.Z","Gzregorz.L","Hansruedi.S","Ivo.B","Jerome.Z","Jürg Brennwalder","Kaschka","Kurt.W","Lukas Zurbuchen","Magi","Magi.Z","Manuel.M","Michael.N","Michelle","Michelle.B","Michelle.Z","Michi.H","Mirco.M","Noel.Z","Oliver Roost","Peter Zurbuchen","Simon.C","Simon.Z","Stefan.E","Stefan.H","Sven.T","Thomas.O","Thomas.Z","Tobias.S","Urs.Z"],"bereiche":["Abbau / Rückgabe","Aufbau allgemein","Ausstellung","Bühne","Deko","Empfang / Gäste","Festwirtschaft","Gastronomie","Getränke","Kinder / Lehrlinge","Lounge","Parkplatz / Verkehr","Produktion / Betrieb","Reinigung / Entsorgung","Rundgang","Technik Licht/Ton","Unterhaltung"],"verantwortliche":["Armin","Armin / Fabienne","Christoph","Dzevdet","Fabienne","Gabi","Hansruedi","Hansruedi / Thomas","Jerome","Magi","Thomas","Urs"],"stand":"2026-08-27","quelle":"Einsatzplan 100 Jahre Event_v12.xlsx"};
+
+const TAGE = DATA.tage.map(t => t.tag);
+const ROLLE = {
+  "Mittwoch": "Aufbau 1", "Donnerstag": "Aufbau 2", "Freitag": "Fest Geschäftsanlass",
+  "Samstag": "Fest Mitarbeitende", "Sonntag": "Abbau"
+};
+const KURZ = { "Mittwoch": "Mi", "Donnerstag": "Do", "Freitag": "Fr", "Samstag": "Sa", "Sonntag": "So" };
+
+function esc(s) {
+  return String(s ?? "").replace(/[&<>"']/g, m =>
+    ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[m]));
+}
+function datumLang(iso) {
+  if (!iso) return "";
+  const [y, m, d] = iso.split("-");
+  return `${+d}.${+m}.${y}`;
+}
+function tagIndex(t) { const i = TAGE.indexOf(t); return i < 0 ? 99 : i; }
+
+function sortiert(liste) {
+  return [...liste].sort((a, b) =>
+    tagIndex(a.tag) - tagIndex(b.tag) ||
+    (a.von || "99:99").localeCompare(b.von || "99:99") ||
+    a.aufgabe.localeCompare(b.aufgabe, "de"));
+}
+
+/* ---------- Bausteine ---------- */
+function zeitBlock(a) {
+  if (!a.von) return `<div class="task-time"><span class="open">Zeit<br>offen</span></div>`;
+  const bis = a.bis ? `<span class="to">${esc(a.bis)}</span>`
+                    : `<span class="open">offen</span>`;
+  return `<div class="task-time"><span class="from">${esc(a.von)}</span>${bis}</div>`;
+}
+
+function aufgabeHTML(a, ich) {
+  const pillen = [];
+  if (a.verantwortlich) pillen.push(`<span class="pill lead">Leitung ${esc(a.verantwortlich)}</span>`);
+  if (a.status && a.status !== "Offen") {
+    pillen.push(`<span class="pill ${a.status === "Erledigt" ? "done" : "lead"}">${esc(a.status)}</span>`);
+  }
+  if (a.konflikt) pillen.push(`<span class="pill warn">Zeitlich doppelt eingeteilt</span>`);
+
+  let leute;
+  if (a.personen.length) {
+    leute = a.personen.map(p =>
+      `<span class="who${p === ich ? " self" : ""}">${esc(p)}</span>`).join("");
+  } else {
+    leute = `<span class="who none">niemand eingeteilt</span>`;
+  }
+
+  return `<article class="task">
+    ${zeitBlock(a)}
+    <div class="task-body">
+      ${a.bereich ? `<p class="area">${esc(a.bereich)}</p>` : ""}
+      <h3>${esc(a.aufgabe)}</h3>
+      ${pillen.length ? `<div class="rowmeta">${pillen.join("")}</div>` : ""}
+      <div class="people">${leute}</div>
+      ${a.bemerkung ? `<p class="note">${esc(a.bemerkung)}</p>` : ""}
+    </div>
+  </article>`;
+}
+
+function tageHTML(liste, ich) {
+  const proTag = new Map();
+  for (const a of sortiert(liste)) {
+    if (!proTag.has(a.tag)) proTag.set(a.tag, []);
+    proTag.get(a.tag).push(a);
+  }
+  let out = "";
+  for (const tag of [...TAGE, ...[...proTag.keys()].filter(t => !TAGE.includes(t))]) {
+    const rows = proTag.get(tag);
+    if (!rows || !rows.length) continue;
+    const info = DATA.tage.find(t => t.tag === tag);
+    out += `<section class="day" data-tag="${esc(tag)}">
+      <div class="dayband">
+        <h2>${esc(tag)}</h2>
+        <span class="date">${esc(datumLang(info && info.datum))}</span>
+        <span class="role">${esc(ROLLE[tag] || "")}</span>
+      </div>
+      <div class="tasks">${rows.map(a => aufgabeHTML(a, ich)).join("")}</div>
+    </section>`;
+  }
+  return out;
+}
+
+/* ---------- Mein Einsatz ---------- */
+const anzahlJe = {};
+for (const p of DATA.personen) anzahlJe[p] = 0;
+for (const a of DATA.aufgaben) for (const p of a.personen) anzahlJe[p] = (anzahlJe[p] || 0) + 1;
+
+const sel = document.getElementById("person");
+sel.innerHTML = `<option value="">— Namen wählen —</option>` +
+  DATA.personen.map(p =>
+    `<option value="${esc(p)}">${esc(p)} · ${anzahlJe[p]} ${anzahlJe[p] === 1 ? "Einsatz" : "Einsätze"}</option>`
+  ).join("");
+
+function zeigeMeine() {
+  const ich = sel.value;
+  const out = document.getElementById("mine-out");
+  const tally = document.getElementById("tally");
+
+  if (!ich) {
+    tally.innerHTML = "";
+    out.innerHTML = `<div class="empty"><strong>Wähle oben deinen Namen</strong>
+      Danach siehst du hier deine Einsätze mit Zeit, Ort und Team.</div>`;
+    return;
+  }
+  try { localStorage.setItem("zurbuchen-person", ich); } catch (e) { /* egal */ }
+
+  const meine = DATA.aufgaben.filter(a => a.personen.includes(ich));
+  if (!meine.length) {
+    tally.innerHTML = "";
+    out.innerHTML = `<div class="empty"><strong>Für ${esc(ich)} ist noch nichts eingeteilt</strong>
+      Wenn das nicht stimmt, bitte bei Thomas oder Jerome melden.</div>`;
+    return;
+  }
+
+  const tage = new Set(meine.map(a => a.tag));
+  const erster = sortiert(meine)[0];
+  const konflikte = meine.filter(a => a.konflikt).length;
+  tally.innerHTML = `
+    <div><span class="n">${meine.length}</span><span class="k">${meine.length === 1 ? "Einsatz" : "Einsätze"}</span></div>
+    <div><span class="n">${tage.size}</span><span class="k">${tage.size === 1 ? "Tag" : "Tage"}</span></div>
+    <div><span class="n">${esc(erster.von || "—")}</span><span class="k">Start ${esc(KURZ[erster.tag] || erster.tag)}</span></div>
+    ${konflikte ? `<div><span class="n" style="color:var(--warn)">${konflikte}</span><span class="k">zu prüfen</span></div>` : ""}`;
+  out.innerHTML = tageHTML(meine, ich);
+}
+sel.addEventListener("change", zeigeMeine);
+
+/* ---------- Gesamtplan ---------- */
+let tagFilter = "";
+const daychips = document.getElementById("daychips");
+daychips.innerHTML =
+  `<button class="chip" data-tag="" aria-pressed="true">Alle Tage</button>` +
+  TAGE.map(t => `<button class="chip" data-tag="${esc(t)}" aria-pressed="false">${esc(t)}</button>`).join("");
+daychips.addEventListener("click", e => {
+  const b = e.target.closest(".chip");
+  if (!b) return;
+  tagFilter = b.dataset.tag;
+  daychips.querySelectorAll(".chip").forEach(c =>
+    c.setAttribute("aria-pressed", String(c === b)));
+  zeigeAlle();
+});
+
+const areasel = document.getElementById("areasel");
+areasel.innerHTML = `<option value="">Alle Bereiche</option>` +
+  DATA.bereiche.map(b => `<option value="${esc(b)}">${esc(b)}</option>`).join("");
+
+const q = document.getElementById("q");
+[areasel, q].forEach(el => el.addEventListener("input", zeigeAlle));
+
+function zeigeAlle() {
+  const suche = q.value.trim().toLowerCase();
+  const bereich = areasel.value;
+  const treffer = DATA.aufgaben.filter(a => {
+    if (tagFilter && a.tag !== tagFilter) return false;
+    if (bereich && a.bereich !== bereich) return false;
+    if (!suche) return true;
+    const heu = [a.aufgabe, a.bereich, a.verantwortlich, a.bemerkung, ...a.personen]
+      .filter(Boolean).join(" ").toLowerCase();
+    return heu.includes(suche);
+  });
+
+  document.getElementById("resultline").textContent =
+    `${treffer.length} von ${DATA.aufgaben.length} Aufgaben`;
+  document.getElementById("all-out").innerHTML = treffer.length
+    ? tageHTML(treffer, null)
+    : `<div class="empty"><strong>Keine Aufgabe gefunden</strong>
+       Filter zurücksetzen oder anders suchen.</div>`;
+}
+
+/* ---------- Ansichtswechsel ---------- */
+const tabMine = document.getElementById("tab-mine");
+const tabAll = document.getElementById("tab-all");
+function wechsle(zuMine) {
+  tabMine.setAttribute("aria-selected", String(zuMine));
+  tabAll.setAttribute("aria-selected", String(!zuMine));
+  document.getElementById("view-mine").classList.toggle("hide", !zuMine);
+  document.getElementById("view-all").classList.toggle("hide", zuMine);
+  window.scrollTo({ top: 0, behavior: "auto" });
+}
+tabMine.addEventListener("click", () => wechsle(true));
+tabAll.addEventListener("click", () => wechsle(false));
+
+/* ---------- Start ---------- */
+document.getElementById("stand").textContent = datumLang(DATA.stand);
+document.getElementById("quelle").textContent = DATA.quelle;
+const ersterTag = DATA.tage[0], letzterTag = DATA.tage[DATA.tage.length - 1];
+if (ersterTag && letzterTag) {
+  const a = ersterTag.datum.split("-"), b = letzterTag.datum.split("-");
+  const monate = ["Januar","Februar","März","April","Mai","Juni","Juli","August",
+                  "September","Oktober","November","Dezember"];
+  document.getElementById("eventspan").textContent =
+    `${+a[2]}.–${+b[2]}. ${monate[+b[1] - 1]} ${b[0]}`;
+}
+
+let gemerkt = "";
+try { gemerkt = localStorage.getItem("zurbuchen-person") || ""; } catch (e) { gemerkt = ""; }
+if (gemerkt && DATA.personen.includes(gemerkt)) sel.value = gemerkt;
+zeigeMeine();
+zeigeAlle();
+</script>
+
+</body>
+</html>
