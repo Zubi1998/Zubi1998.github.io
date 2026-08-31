@@ -643,15 +643,9 @@ function tageHTML(liste, ich) {
 }
 
 /* ---------- Mein Einsatz ---------- */
-const anzahlJe = {};
-for (const p of DATA.personen) anzahlJe[p] = 0;
-for (const a of DATA.aufgaben) for (const p of a.personen) anzahlJe[p] = (anzahlJe[p] || 0) + 1;
-
 const sel = document.getElementById("person");
 sel.innerHTML = `<option value="">— Namen wählen —</option>` +
-  DATA.personen.map(p =>
-    `<option value="${esc(p)}">${esc(p)} · ${anzahlJe[p]} ${anzahlJe[p] === 1 ? "Einsatz" : "Einsätze"}</option>`
-  ).join("");
+  DATA.personen.map(p => `<option value="${esc(p)}">${esc(p)}</option>`).join("");
 
 function zeigeMeine() {
   const ich = sel.value;
